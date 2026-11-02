@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://amiralikop90.github.io/Base64-Tool/sitemap.xml
