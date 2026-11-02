@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ===== Google Search Console Verification ===== -->
+  <meta name="google-site-verification" content="mLworcsiofOhMsDaAZ9Vzi7Swi1QErd75vJHjTm8bxw" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>مبدل Base64 آنلاین | Encode / Decode | Base64 Tool</title>
+
+  <meta name="description" content="مبدل آنلاین و رایگان Base64 — تبدیل متن به Base64 و برعکس. پشتیبانی از URL-safe، آپلود فایل، کپی و دانلود. با ۳ زبان و دو تم.">
+  <meta name="keywords" content="Base64, Base64 Encoder, Base64 Decoder, مبدل Base64, تبدیل Base64, Encode, Decode, URL-safe, ابزار آنلاین">
+  <meta name="author" content="Amirali Kamani">
+  <meta name="publisher" content="psoa.ir">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://amiralikop90.github.io/Base64-Tool/">
+  <link rel="alternate" hreflang="fa" href="https://amiralikop90.github.io/Base64-Tool/">
+  <link rel="alternate" hreflang="en" href="https://amiralikop90.github.io/Base64-Tool/?lang=en">
+  <link rel="alternate" hreflang="zh" href="https://amiralikop90.github.io/Base64-Tool/?lang=zh">
+  <link rel="alternate" hreflang="x-default" href="https://amiralikop90.github.io/Base64-Tool/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amiralikop90.github.io/Base64-Tool/">
+  <meta property="og:title" content="مبدل Base64 آنلاین — Encode / Decode">
+  <meta property="og:description" content="تبدیل متن به Base64 و برعکس. پشتیبانی از URL-safe، آپلود فایل، کپی و دانلود.">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:site_name" content="Base64 Tool">
+  <meta property="og:image" content="https://psoa.ir/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="مبدل Base64 آنلاین">
+  <meta name="twitter:description" content="تبدیل متن به Base64 و برعکس. رایگان و بدون ثبت‌نام.">
+  <meta name="twitter:image" content="https://psoa.ir/og-image.png">
+
+  <link rel="icon" type="image/x-icon" href="https://psoa.ir/favicon.ico">
+  <link rel="apple-touch-icon" href="https://psoa.ir/favicon.ico">
+  <meta name="theme-color" content="#6366f1">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Base64 Tool",
+    "url": "https://amiralikop90.github.io/Base64-Tool/",
+    "description": "مبدل آنلاین رایگان Base64 — تبدیل متن به Base64 و برعکس.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "Amirali Kamani", "url": "https://psoa.ir" },
+    "inLanguage": ["fa", "en", "zh"]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f5f7fa; --surface: #ffffff; --surface-2: #f8fafc;
+      --text: #1a202c; --text-muted: #718096; --border: #e2e8f0;
+      --accent-1: #6366f1; --accent-2: #8b5cf6;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --code-bg: #1a1d23; --code-text: #7dd3a0;
+      --success: #10b981; --warning: #f59e0b; --danger: #ef4444;
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
+    }
+    [data-theme="dark"] {
+      --bg: #0a0a0a; --surface: #141414; --surface-2: #1c1c1c;
+      --text: #f0f0f0; --text-muted: #8a8a8a; --border: #262626;
+      --accent-1: #818cf8; --accent-2: #a78bfa;
+      --accent-glow: rgba(129, 140, 248, 0.3);
+      --code-bg: #0d0d0d; --code-text: #86efac;
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.6);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.8);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Inter','Segoe UI','PingFang SC','Microsoft YaHei',Tahoma,sans-serif;
+      border-radius: 0 !important;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+    body {
+      background: var(--bg);
+      background-image:
+        radial-gradient(circle at 20% 10%, var(--accent-glow), transparent 40%),
+        radial-gradient(circle at 80% 90%, var(--accent-glow), transparent 40%);
+      min-height: 100vh; padding: 24px;
+      display: flex; justify-content: center; align-items: flex-start;
+      color: var(--text); overflow-x: hidden;
+    }
+    .top-bar { position: fixed; top: 20px; left: 20px; right: 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 12px; z-index: 100; pointer-events: none;
+    }
+    .top-bar > * { pointer-events: auto; }
+    .theme-toggle { width: 48px; height: 48px;
+      border: 1px solid var(--border); background: var(--surface);
+      color: var(--text); cursor: pointer; font-size: 20px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .theme-toggle:hover { transform: scale(1.1) rotate(15deg); }
+    .lang-switcher { display: flex; border: 1px solid var(--border);
+      background: var(--surface); box-shadow: var(--shadow-md);
+    }
+    .lang-btn { padding: 12px 16px; border: none;
+      border-left: 1px solid var(--border); background: transparent;
+      color: var(--text-muted); cursor: pointer; font-size: 13px;
+      font-weight: 600; transition: all 0.2s; font-family: inherit;
+    }
+    .lang-btn:first-child { border-left: none; }
+    .lang-btn:hover { color: var(--text); background: var(--surface-2); }
+    .lang-btn.active {
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      color: #fff;
+    }
+    .container { background: var(--surface); border: 1px solid var(--border);
+      padding: 36px; max-width: 900px; width: 100%;
+      box-shadow: var(--shadow-lg); position: relative;
+      animation: fadeIn 0.5s ease; margin-top: 40px;
+    }
+    .container::before, .container::after {
+      content: ''; position: absolute; width: 20px; height: 20px;
+      border: 2px solid var(--accent-1);
+    }
+    .container::before { top: -1px; right: -1px; border-left: none; border-bottom: none; }
+    .container::after { bottom: -1px; left: -1px; border-right: none; border-top: none; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .promo-banner {
+      display: block; text-decoration: none; color: inherit;
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      padding: 16px 20px; margin-bottom: 24px;
+      position: relative; overflow: hidden; cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+    .promo-banner::before {
+      content: ''; position: absolute; top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      animation: shimmer 3s infinite;
+    }
+    @keyframes shimmer { 0% { left: -100%; } 100% { left: 100%; } }
+    .promo-banner:hover { transform: translateY(-2px); }
+    .promo-content { display: flex; align-items: center; gap: 14px; position: relative; z-index: 1; }
+    .promo-icon { font-size: 28px; animation: bounce 2s infinite; }
+    @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+    .promo-text { flex: 1; color: #fff; }
+    .promo-title { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+    .promo-subtitle { font-size: 12px; opacity: 0.9; }
+    .promo-url { font-size: 12px; font-weight: 700; color: #fff;
+      background: rgba(255,255,255,0.2); padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,0.3); white-space: nowrap;
+    }
+    h1 { color: var(--text); margin-bottom: 10px; text-align: center;
+      font-size: 26px; font-weight: 700;
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle { text-align: center; color: var(--text-muted); margin-bottom: 30px; font-size: 14px; }
+
+    /* ===== TABS ===== */
+    .mode-tabs {
+      display: flex; gap: 0; flex-wrap: wrap;
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    .mode-tab {
+      flex: 1; min-width: fit-content;
+      padding: 14px 18px;
+      border: none; border-left: 1px solid var(--border);
+      background: var(--surface-2); color: var(--text-muted);
+      cursor: pointer; font-size: 14px; font-weight: 600;
+      font-family: inherit; transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .mode-tab:first-child { border-left: none; }
+    .mode-tab:hover { color: var(--text); background: var(--surface); }
+    .mode-tab.active {
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      color: #fff;
+    }
+
+    /* ===== FIELD ===== */
+    .field-wrapper {
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .field-header {
+      display: flex; justify-content: space-between;
+      align-items: center;
+      padding: 8px 14px;
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border);
+      font-size: 12px; font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .field-header-actions {
+      display: flex; gap: 6px;
+    }
+    .field-action {
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 11px;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .field-action:hover {
+      color: var(--accent-1);
+      border-color: var(--accent-1);
+    }
+    textarea {
+      width: 100%; min-height: 160px; max-height: 300px;
+      padding: 14px;
+      border: none;
+      background: var(--surface);
+      color: var(--text);
+      font-size: 14px;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      line-height: 1.6;
+      resize: vertical;
+      outline: none;
+      direction: ltr;
+      text-align: left;
+    }
+    textarea::placeholder {
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    /* ===== OPTIONS ===== */
+    .options-row {
+      display: flex; flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding: 14px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+    }
+    .option-toggle {
+      display: flex; align-items: center; gap: 8px;
+      cursor: pointer;
+      user-select: none;
+      font-size: 13px;
+      color: var(--text);
+    }
+    .toggle-switch {
+      position: relative;
+      width: 40px; height: 22px;
+      background: var(--border);
+      transition: background 0.2s;
+    }
+    .toggle-switch.on {
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    }
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 2px; left: 2px;
+      width: 18px; height: 18px;
+      background: #fff;
+      transition: transform 0.2s;
+    }
+    .toggle-switch.on::after {
+      transform: translateX(18px);
+    }
+
+    /* ===== BUTTONS ===== */
+    .buttons {
+      display: flex; gap: 0; flex-wrap: wrap;
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+    button.action {
+      flex: 1; min-width: 100px;
+      padding: 14px 16px;
+      border: none; border-left: 1px solid var(--border);
+      background: var(--surface-2); color: var(--text);
+      cursor: pointer; font-size: 13px; font-weight: 600;
+      font-family: inherit; transition: all 0.2s;
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 6px;
+    }
+    button.action:first-child { border-left: none; }
+    button.action:hover { background: var(--surface); color: var(--accent-1); }
+    button.action:active { transform: scale(0.97); }
+    button.action.primary {
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      color: #fff; font-weight: 700;
+    }
+    button.action.primary:hover { filter: brightness(1.1); color: #fff; }
+
+    /* ===== STATS ===== */
+    .stats-bar {
+      display: flex; flex-wrap: wrap;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      margin-bottom: 16px;
+    }
+    .stat {
+      flex: 1; min-width: 100px;
+      padding: 10px 14px;
+      border-left: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      gap: 2px;
+    }
+    .stat:first-child { border-left: none; }
+    .stat-label {
+      font-size: 10px; font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .stat-value {
+      font-size: 15px; font-weight: 700;
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ===== ALERT ===== */
+    .alert {
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 13px;
+      font-weight: 600;
+      display: none;
+      border: 1px solid;
+    }
+    .alert.show { display: block; }
+    .alert.success {
+      background: rgba(16, 185, 129, 0.1);
+      border-color: var(--success);
+      color: var(--success);
+    }
+    .alert.error {
+      background: rgba(239, 68, 68, 0.1);
+      border-color: var(--danger);
+      color: var(--danger);
+    }
+
+    /* ===== FILE UPLOAD ===== */
+    .file-upload {
+      display: none;
+      padding: 20px;
+      border: 2px dashed var(--border);
+      background: var(--surface-2);
+      text-align: center;
+      margin-bottom: 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .file-upload.active { display: block; }
+    .file-upload:hover {
+      border-color: var(--accent-1);
+      background: var(--surface);
+    }
+    .file-upload-icon { font-size: 36px; margin-bottom: 8px; }
+    .file-upload-text {
+      font-size: 13px; color: var(--text-muted);
+    }
+    .file-upload-text strong {
+      color: var(--accent-1);
+      cursor: pointer;
+    }
+    .file-info {
+      padding: 10px 14px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: none;
+    }
+    .file-info.show { display: block; }
+    .file-info strong { color: var(--text); }
+
+    /* ===== SEO ===== */
+    .seo-content { margin-top: 40px; padding-top: 30px;
+      border-top: 1px solid var(--border); color: var(--text);
+      font-size: 14px; line-height: 1.9;
+    }
+    .seo-content h2 { font-size: 18px; font-weight: 700; margin-bottom: 14px;
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .seo-content h3 { font-size: 15px; font-weight: 600; margin: 18px 0 8px; color: var(--text); }
+    .seo-content p { color: var(--text-muted); margin-bottom: 12px; }
+    .seo-content ul { list-style: none; padding-right: 0; margin-bottom: 14px; }
+    .seo-content li { padding: 6px 0; color: var(--text-muted);
+      position: relative; padding-right: 22px;
+    }
+    .seo-content li::before { content: '✓'; position: absolute; right: 0;
+      color: var(--accent-1); font-weight: 700;
+    }
+    .faq-item { border: 1px solid var(--border); padding: 14px 18px;
+      margin-bottom: 10px; background: var(--surface-2);
+    }
+    .faq-item summary { cursor: pointer; font-weight: 600;
+      color: var(--text); font-size: 14px; list-style: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before { content: '▸ '; color: var(--accent-1);
+      transition: transform 0.2s; display: inline-block;
+    }
+    .faq-item[open] summary::before { transform: rotate(90deg); }
+    .faq-item p { margin-top: 10px; color: var(--text-muted);
+      font-size: 13px; line-height: 1.8;
+    }
+
+    .footer { text-align: center; margin-top: 28px; padding-top: 22px;
+      border-top: 1px solid var(--border); font-size: 13px;
+      color: var(--text-muted); line-height: 1.9;
+    }
+    .footer a { color: var(--accent-1); text-decoration: none; font-weight: 600; }
+    .footer a:hover { color: var(--accent-2); text-decoration: underline; }
+
+    /* ===== TOAST ===== */
+    .toast {
+      position: fixed; bottom: 30px; left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+      color: #fff; padding: 12px 24px;
+      font-size: 13px; font-weight: 600;
+      box-shadow: 0 8px 24px var(--accent-glow);
+      opacity: 0; z-index: 1000;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      pointer-events: none;
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 24px; margin-top: 60px; }
+      h1 { font-size: 20px; }
+      .theme-toggle { width: 42px; height: 42px; font-size: 18px; }
+      .lang-btn { padding: 10px 10px; font-size: 11px; }
+      .top-bar { top: 12px; left: 12px; right: 12px; }
+      .promo-content { flex-wrap: wrap; }
+      .promo-url { font-size: 11px; padding: 6px 10px; }
+      .promo-icon { font-size: 22px; }
+      .mode-tab { font-size: 12px; padding: 10px 8px; }
+      button.action { font-size: 12px; padding: 12px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <button class="theme-toggle" id="themeToggle" aria-label="تغییر تم">🌙</button>
+    <nav class="lang-switcher" aria-label="انتخاب زبان">
+      <button class="lang-btn active" data-lang="fa" aria-label="فارسی">🇮🇷 فارسی</button>
+      <button class="lang-btn" data-lang="en" aria-label="English">🇬🇧 English</button>
+      <button class="lang-btn" data-lang="zh" aria-label="中文">🇨🇳 中文</button>
+    </nav>
+  </div>
+
+  <main class="container">
+
+    <a href="https://psoa.ir" target="_blank" rel="noopener" class="promo-banner" aria-label="سایت رسمی امیرعلی کمانی">
+      <div class="promo-content">
+        <span class="promo-icon" aria-hidden="true">🚀</span>
+        <div class="promo-text">
+          <div class="promo-title" data-i18n="promoTitle">سایت رسمی من — psoa.ir</div>
+          <div class="promo-subtitle" data-i18n="promoSubtitle">یه سر بزن، چیزهای جالبی داری!</div>
+        </div>
+        <span class="promo-url">psoa.ir ←</span>
+      </div>
+    </a>
+
+    <h1 id="title">🔐 مبدل Base64 آنلاین</h1>
+    <p class="subtitle" id="subtitle">تبدیل متن به Base64 و برعکس — سریع، رایگان، بدون ثبت‌نام</p>
+
+    <!-- Mode Tabs -->
+    <div class="mode-tabs" id="modeTabs">
+      <button class="mode-tab active" data-mode="encode" data-i18n="tabEncode">📝 Encode (متن → Base64)</button>
+      <button class="mode-tab" data-mode="decode" data-i18n="tabDecode">🔓 Decode (Base64 → متن)</button>
+    </div>
+
+    <!-- Alert -->
+    <div class="alert" id="alertBox"></div>
+
+    <!-- Input -->
+    <div class="field-wrapper">
+      <div class="field-header">
+        <span data-i18n="inputLabel">ورودی</span>
+        <div class="field-header-actions">
+          <button class="field-action" id="pasteBtn" data-i18n="btnPaste">📋 چسباندن</button>
+          <button class="field-action" id="clearInputBtn" data-i18n="btnClearInput">🗑️ پاک</button>
+        </div>
+      </div>
+      <textarea id="input" placeholder="اینجا بنویس..." data-i18n-placeholder="phInput"></textarea>
+    </div>
+
+    <!-- Options -->
+    <div class="options-row">
+      <div class="option-toggle" id="urlSafeToggle">
+        <div class="toggle-switch" id="urlSafeSwitch"></div>
+        <span data-i18n="optUrlSafe">URL-safe (به جای + و / از - و _)</span>
+      </div>
+      <div class="option-toggle" id="liveToggle">
+        <div class="toggle-switch on" id="liveSwitch"></div>
+        <span data-i18n="optLive">تبدیل زنده</span>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button id="convertBtn" class="action primary" data-i18n="btnConvert">🔄 تبدیل</button>
+      <button id="swapBtn" class="action" data-i18n="btnSwap">⇅ جابجایی</button>
+      <button id="uploadBtn" class="action" data-i18n="btnUpload">📁 فایل</button>
+    </div>
+
+    <!-- File Upload -->
+    <div class="file-upload" id="fileUpload">
+      <div class="file-upload-icon">📁</div>
+      <div class="file-upload-text">
+        <span data-i18n="fileDrop">فایل رو بکش و رها کن یا</span>
+        <strong data-i18n="fileClick">انتخاب کن</strong>
+      </div>
+      <input type="file" id="fileInput" style="display:none;">
+    </div>
+
+    <div class="file-info" id="fileInfo"></div>
+
+    <!-- Output -->
+    <div class="field-wrapper">
+      <div class="field-header">
+        <span data-i18n="outputLabel">خروجی</span>
+        <div class="field-header-actions">
+          <button class="field-action" id="copyBtn" data-i18n="btnCopy">📋 کپی</button>
+          <button class="field-action" id="downloadBtn" data-i18n="btnDownload">💾 دانلود</button>
+        </div>
+      </div>
+      <textarea id="output" placeholder="نتیجه اینجا نمایش داده می‌شه..." data-i18n-placeholder="phOutput" readonly></textarea>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-label" data-i18n="statInput">ورودی</span>
+        <span class="stat-value" id="statInput">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label" data-i18n="statOutput">خروجی</span>
+        <span class="stat-value" id="statOutput">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label" data-i18n="statSize">حجم</span>
+        <span class="stat-value" id="statSize">0 B</span>
+      </div>
+    </div>
+
+    <!-- SEO Content -->
+    <section class="seo-content">
+      <h2 data-i18n="seoH2">درباره‌ی مبدل Base64</h2>
+      <p data-i18n="seoP1">Base64 یک روش رمزگذاری است که داده‌های باینری را به متن ASCII تبدیل می‌کند. این ابزار آنلاین و رایگان به شما امکان می‌دهد متن را به Base64 تبدیل کنید و برعکس. همچنین از URL-safe mode، آپلود فایل و کپی/دانلود پشتیبانی می‌کند.</p>
+
+      <h3 data-i18n="seoH3Features">ویژگی‌های کلیدی</h3>
+      <ul>
+        <li data-i18n="feat1">📝 تبدیل متن به Base64 و برعکس</li>
+        <li data-i18n="feat2">🔗 URL-safe mode (استفاده از - و _ به جای + و /)</li>
+        <li data-i18n="feat3">📁 آپلود فایل و تبدیل به Base64</li>
+        <li data-i18n="feat4">🔄 تبدیل زنده همزمان با تایپ</li>
+        <li data-i18n="feat5">📊 آمار زنده (تعداد کاراکتر، حجم)</li>
+        <li data-i18n="feat6">📋 کپی و دانلود خروجی</li>
+        <li data-i18n="feat7">🌐 پشتیبانی از ۳ زبان (فارسی، انگلیسی، چینی)</li>
+        <li data-i18n="feat8">🌙 دو تم تاریک و روشن</li>
+      </ul>
+
+      <h3 data-i18n="seoH3Faq">سوالات متداول</h3>
+
+      <details class="faq-item">
+        <summary data-i18n="faqQ1">Base64 چیه و به چه دردی می‌خوره؟</summary>
+        <p data-i18n="faqA1">Base64 یک روش رمزگذاری است که داده‌های باینری (مثل تصویر، فایل، یا هر داده‌ای که کاراکترهای غیرمتنی داره) رو به کاراکترهای ASCII تبدیل می‌کنه. اینطوری می‌شه داده‌ها رو تو JSON، XML، URL یا ایمیل استفاده کرد.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faqQ2">URL-safe mode چیه؟</summary>
+        <p data-i18n="faqA2">در Base64 معمولی از کاراکترهای + و / استفاده می‌شه که تو URL معنی خاصی دارن. تو URL-safe mode این کاراکترها با - و _ جایگزین می‌شن تا بتونید Base64 رو مستقیم تو URL استفاده کنید.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faqQ3">آیا داده‌های من جایی ذخیره می‌شه؟</summary>
+        <p data-i18n="faqA3">خیر، تمام پردازش‌ها در مرورگر خود شما انجام می‌شه. هیچ داده‌ای به سرور ارسال نمی‌شه.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary data-i18n="faqQ4">آیا می‌تونم فایل رو به Base64 تبدیل کنم؟</summary>
+        <p data-i18n="faqA4">بله، با دکمه «📁 فایل» می‌تونید هر فایلی رو انتخاب کنید و Base64 اون رو ببینید. این برای تبدیل تصویر، PDF و ... به Base64 مناسبه.</p>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <span data-i18n="footerText">برای دیدن لایسنس این وب‌سایت، لطفاً به</span>
+      <a href="https://psoa.ir/licens.html" target="_blank" rel="noopener">psoa.ir/licens.html</a>
+      <span data-i18n="footerText2">مراجعه کنید.</span>
+    </footer>
+
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ============================================================
+    // Base64 Tool — Encode / Decode
+    // Author: Amirali Kamani
+    // License: MIT (https://psoa.ir/licens.html)
+    // ============================================================
+
+    let currentMode = 'encode';
+    let urlSafe = false;
+    let liveMode = true;
+
+    // ===== DOM =====
+    const html = document.documentElement;
+    const titleEl = document.getElementById('title');
+    const subtitleEl = document.getElementById('subtitle');
+    const themeToggle = document.getElementById('themeToggle');
+    const langBtns = document.querySelectorAll('.lang-btn');
+    const modeTabs = document.querySelectorAll('.mode-tab');
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+    const alertBox = document.getElementById('alertBox');
+    const convertBtn = document.getElementById('convertBtn');
+    const swapBtn = document.getElementById('swapBtn');
+    const uploadBtn = document.getElementById('uploadBtn');
+    const pasteBtn = document.getElementById('pasteBtn');
+    const clearInputBtn = document.getElementById('clearInputBtn');
+    const copyBtn = document.getElementById('copyBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const fileUpload = document.getElementById('fileUpload');
+    const fileInput = document.getElementById('fileInput');
+    const fileInfo = document.getElementById('fileInfo');
+    const urlSafeToggle = document.getElementById('urlSafeToggle');
+    const urlSafeSwitch = document.getElementById('urlSafeSwitch');
+    const liveToggle = document.getElementById('liveToggle');
+    const liveSwitch = document.getElementById('liveSwitch');
+    const statInput = document.getElementById('statInput');
+    const statOutput = document.getElementById('statOutput');
+    const statSize = document.getElementById('statSize');
+    const toast = document.getElementById('toast');
+
+    // ===== TRANSLATIONS =====
+    const translations = {
+      fa: {
+        title: '🔐 مبدل Base64 آنلاین',
+        subtitle: 'تبدیل متن به Base64 و برعکس — سریع، رایگان، بدون ثبت‌نام',
+        tabEncode: '📝 Encode (متن → Base64)',
+        tabDecode: '🔓 Decode (Base64 → متن)',
+        inputLabel: 'ورودی',
+        outputLabel: 'خروجی',
+        btnPaste: '📋 چسباندن',
+        btnClearInput: '🗑️ پاک',
+        btnConvert: '🔄 تبدیل',
+        btnSwap: '⇅ جابجایی',
+        btnUpload: '📁 فایل',
+        btnCopy: '📋 کپی',
+        btnDownload: '💾 دانلود',
+        optUrlSafe: 'URL-safe (به جای + و / از - و _)',
+        optLive: 'تبدیل زنده',
+        fileDrop: 'فایل رو بکش و رها کن یا',
+        fileClick: 'انتخاب کن',
+        statInput: 'ورودی',
+        statOutput: 'خروجی',
+        statSize: 'حجم',
+        phInput: 'اینجا بنویس...',
+        phOutput: 'نتیجه اینجا نمایش داده می‌شه...',
+        copied: '✅ کپی شد!',
+        pasted: '✅ چسبانده شد!',
+        converted: '✅ تبدیل شد!',
+        swapped: '⇅ جابجا شد!',
+        cleared: '🗑️ پاک شد',
+        downloaded: '✅ دانلود شد!',
+        empty: '⚠️ اول چیزی وارد کن',
+        invalidBase64: '⚠️ Base64 نامعتبر است',
+        fileSelected: 'فایل انتخاب شد: ',
+        pasteNotSupported: '⚠️ مرورگر از کلیپ‌بورد پشتیبانی نمی‌کند',
+        promoTitle: 'سایت رسمی من — psoa.ir',
+        promoSubtitle: 'یه سر بزن، چیزهای جالبی داری!',
+        footerText: 'برای دیدن لایسنس این وب‌سایت، لطفاً به',
+        footerText2: 'مراجعه کنید.',
+        seoH2: 'درباره‌ی مبدل Base64',
+        seoP1: 'Base64 یک روش رمزگذاری است که داده‌های باینری را به متن ASCII تبدیل می‌کند. این ابزار آنلاین و رایگان به شما امکان می‌دهد متن را به Base64 تبدیل کنید و برعکس.',
+        seoH3Features: 'ویژگی‌های کلیدی',
+        feat1: '📝 تبدیل متن به Base64 و برعکس',
+        feat2: '🔗 URL-safe mode (استفاده از - و _ به جای + و /)',
+        feat3: '📁 آپلود فایل و تبدیل به Base64',
+        feat4: '🔄 تبدیل زنده همزمان با تایپ',
+        feat5: '📊 آمار زنده (تعداد کاراکتر، حجم)',
+        feat6: '📋 کپی و دانلود خروجی',
+        feat7: '🌐 پشتیبانی از ۳ زبان (فارسی، انگلیسی، چینی)',
+        feat8: '🌙 دو تم تاریک و روشن',
+        seoH3Faq: 'سوالات متداول',
+        faqQ1: 'Base64 چیه و به چه دردی می‌خوره؟',
+        faqA1: 'Base64 یک روش رمزگذاری است که داده‌های باینری رو به کاراکترهای ASCII تبدیل می‌کنه. اینطوری می‌شه داده‌ها رو تو JSON، XML، URL یا ایمیل استفاده کرد.',
+        faqQ2: 'URL-safe mode چیه؟',
+        faqA2: 'در Base64 معمولی از کاراکترهای + و / استفاده می‌شه که تو URL معنی خاصی دارن. تو URL-safe mode این کاراکترها با - و _ جایگزین می‌شن.',
+        faqQ3: 'آیا داده‌های من جایی ذخیره می‌شه؟',
+        faqA3: 'خیر، تمام پردازش‌ها در مرورگر خود شما انجام می‌شه.',
+        faqQ4: 'آیا می‌تونم فایل رو به Base64 تبدیل کنم؟',
+        faqA4: 'بله، با دکمه «📁 فایل» می‌تونید هر فایلی رو انتخاب کنید و Base64 اون رو ببینید.'
+      },
+      en: {
+        title: '🔐 Base64 Encoder/Decoder',
+        subtitle: 'Convert text to Base64 and back — fast, free, no signup',
+        tabEncode: '📝 Encode (Text → Base64)',
+        tabDecode: '🔓 Decode (Base64 → Text)',
+        inputLabel: 'Input',
+        outputLabel: 'Output',
+        btnPaste: '📋 Paste',
+        btnClearInput: '🗑️ Clear',
+        btnConvert: '🔄 Convert',
+        btnSwap: '⇅ Swap',
+        btnUpload: '📁 File',
+        btnCopy: '📋 Copy',
+        btnDownload: '💾 Download',
+        optUrlSafe: 'URL-safe (use - and _ instead of + and /)',
+        optLive: 'Live conversion',
+        fileDrop: 'Drop a file here or',
+        fileClick: 'choose one',
+        statInput: 'Input',
+        statOutput: 'Output',
+        statSize: 'Size',
+        phInput: 'Type here...',
+        phOutput: 'Result appears here...',
+        copied: '✅ Copied!',
+        pasted: '✅ Pasted!',
+        converted: '✅ Converted!',
+        swapped: '⇅ Swapped!',
+        cleared: '🗑️ Cleared',
+        downloaded: '✅ Downloaded!',
+        empty: '⚠️ Enter something first',
+        invalidBase64: '⚠️ Invalid Base64',
+        fileSelected: 'File selected: ',
+        pasteNotSupported: '⚠️ Clipboard not supported',
+        promoTitle: 'My official website — psoa.ir',
+        promoSubtitle: 'Drop by, there is something interesting!',
+        footerText: 'To view the license of this website, please visit',
+        footerText2: '.',
+        seoH2: 'About Base64 Tool',
+        seoP1: 'Base64 is an encoding method that converts binary data to ASCII text. This free online tool lets you convert text to Base64 and back.',
+        seoH3Features: 'Key Features',
+        feat1: '📝 Convert text to Base64 and back',
+        feat2: '🔗 URL-safe mode (use - and _ instead of + and /)',
+        feat3: '📁 Upload files and convert to Base64',
+        feat4: '🔄 Live conversion as you type',
+        feat5: '📊 Live stats (character count, size)',
+        feat6: '📋 Copy and download output',
+        feat7: '🌐 Supports 3 languages (Persian, English, Chinese)',
+        feat8: '🌙 Dual themes: dark and light',
+        seoH3Faq: 'Frequently Asked Questions',
+        faqQ1: 'What is Base64 and what is it used for?',
+        faqA1: 'Base64 is an encoding method that converts binary data to ASCII characters. This allows data to be used in JSON, XML, URLs, or emails.',
+        faqQ2: 'What is URL-safe mode?',
+        faqA2: 'Standard Base64 uses + and / which have special meaning in URLs. URL-safe mode replaces them with - and _.',
+        faqQ3: 'Is my data stored anywhere?',
+        faqA3: 'No, all processing happens in your browser.',
+        faqQ4: 'Can I convert files to Base64?',
+        faqA4: 'Yes, use the 📁 File button to select any file and see its Base64 representation.'
+      },
+      zh: {
+        title: '🔐 在线 Base64 转换器',
+        subtitle: '将文本转换为 Base64 并返回 — 快速、免费、无需注册',
+        tabEncode: '📝 编码（文本 → Base64）',
+        tabDecode: '🔓 解码（Base64 → 文本）',
+        inputLabel: '输入',
+        outputLabel: '输出',
+        btnPaste: '📋 粘贴',
+        btnClearInput: '🗑️ 清空',
+        btnConvert: '🔄 转换',
+        btnSwap: '⇅ 交换',
+        btnUpload: '📁 文件',
+        btnCopy: '📋 复制',
+        btnDownload: '💾 下载',
+        optUrlSafe: 'URL 安全模式（用 - 和 _ 代替 + 和 /）',
+        optLive: '实时转换',
+        fileDrop: '拖放文件或',
+        fileClick: '选择文件',
+        statInput: '输入',
+        statOutput: '输出',
+        statSize: '大小',
+        phInput: '在此输入...',
+        phOutput: '结果显示在这里...',
+        copied: '✅ 已复制！',
+        pasted: '✅ 已粘贴！',
+        converted: '✅ 已转换！',
+        swapped: '⇅ 已交换！',
+        cleared: '🗑️ 已清空',
+        downloaded: '✅ 已下载！',
+        empty: '⚠️ 请先输入内容',
+        invalidBase64: '⚠️ 无效的 Base64',
+        fileSelected: '已选择文件：',
+        pasteNotSupported: '⚠️ 浏览器不支持剪贴板',
+        promoTitle: '我的官方网站 — psoa.ir',
+        promoSubtitle: '来看看，会很有趣！',
+        footerText: '要查看本网站的许可证，请访问',
+        footerText2: '。',
+        seoH2: '关于 Base64 转换器',
+        seoP1: 'Base64 是一种将二进制数据转换为 ASCII 文本的编码方法。这个免费的在线工具可以让您将文本转换为 Base64 并返回。',
+        seoH3Features: '主要功能',
+        feat1: '📝 将文本转换为 Base64 并返回',
+        feat2: '🔗 URL 安全模式（用 - 和 _ 代替 + 和 /）',
+        feat3: '📁 上传文件并转换为 Base64',
+        feat4: '🔄 输入时实时转换',
+        feat5: '📊 实时统计（字符数、大小）',
+        feat6: '📋 复制和下载输出',
+        feat7: '🌐 支持 3 种语言（波斯语、英语、中文）',
+        feat8: '🌙 双主题：深色和浅色',
+        seoH3Faq: '常见问题',
+        faqQ1: '什么是 Base64，有什么用途？',
+        faqA1: 'Base64 是一种将二进制数据转换为 ASCII 字符的编码方法。这允许数据用于 JSON、XML、URL 或电子邮件。',
+        faqQ2: '什么是 URL 安全模式？',
+        faqA2: '标准 Base64 使用 + 和 /，它们在 URL 中有特殊含义。URL 安全模式用 - 和 _ 替换它们。',
+        faqQ3: '我的数据会被存储吗？',
+        faqA3: '不会，所有处理都在您的浏览器中进行。',
+        faqQ4: '我可以将文件转换为 Base64 吗？',
+        faqA4: '是的，使用 📁 文件按钮选择任何文件并查看其 Base64 表示。'
+      }
+    };
+
+    const rtlLangs = ['fa'];
+    let currentLang = localStorage.getItem('b64_lang') || 'fa';
+    if (!translations[currentLang]) currentLang = 'fa';
+    let currentTheme = localStorage.getItem('b64_theme') || 'light';
+
+    function t(key) {
+      return translations[currentLang][key] || translations.en[key] || key;
+    }
+
+    // ===== THEME =====
+    function applyTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+      currentTheme = theme;
+      localStorage.setItem('b64_theme', theme);
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#0a0a0a' : '#f5f7fa');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+
+    // ===== LANGUAGE =====
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('b64_lang', lang);
+      const dir = rtlLangs.includes(lang) ? 'rtl' : 'ltr';
+      html.setAttribute('dir', dir);
+      html.setAttribute('lang', lang);
+
+      titleEl.textContent = t('title');
+      subtitleEl.textContent = t('subtitle');
+      document.title = t('title');
+
+      langBtns.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        el.textContent = t(key);
+      });
+
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        el.placeholder = t(el.dataset.i18nPlaceholder);
+      });
+    }
+
+    langBtns.forEach(btn => {
+      btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+    });
+
+    // ===== TOAST =====
+    let toastTimer;
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2000);
+    }
+
+    // ===== ALERT =====
+    function showAlert(msg, type = 'success') {
+      alertBox.textContent = msg;
+      alertBox.className = 'alert show ' + type;
+      setTimeout(() => alertBox.classList.remove('show'), 3000);
+    }
+
+    // ===== MODE TABS =====
+    modeTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        modeTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentMode = tab.dataset.mode;
+        input.placeholder = currentMode === 'encode' ? t('phInput') : 'Base64...';
+        // تبدیل خودکار
+        if (input.value.trim()) doConvert();
+      });
+    });
+
+    // ===== TOGGLES =====
+    urlSafeToggle.addEventListener('click', () => {
+      urlSafe = !urlSafe;
+      urlSafeSwitch.classList.toggle('on', urlSafe);
+      if (input.value.trim()) doConvert();
+    });
+
+    liveToggle.addEventListener('click', () => {
+      liveMode = !liveMode;
+      liveSwitch.classList.toggle('on', liveMode);
+    });
+
+    // ===== CONVERT =====
+    function doConvert() {
+      const text = input.value;
+
+      if (!text.trim()) {
+        output.value = '';
+        updateStats();
+        return;
+      }
+
+      try {
+        let result;
+        if (currentMode === 'encode') {
+          result = encodeBase64(text);
+        } else {
+          result = decodeBase64(text);
+        }
+        output.value = result;
+        updateStats();
+        alertBox.classList.remove('show');
+      } catch (err) {
+        output.value = '';
+        showAlert(t('invalidBase64'), 'error');
+        updateStats();
+      }
+    }
+
+    function encodeBase64(text) {
+      // UTF-8 encode
+      const utf8 = unescape(encodeURIComponent(text));
+      let encoded = btoa(utf8);
+      if (urlSafe) {
+        encoded = encoded.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+      }
+      return encoded;
+    }
+
+    function decodeBase64(b64) {
+      let str = b64.trim();
+      // URL-safe → استاندارد
+      if (urlSafe || /[-_]/.test(str)) {
+        str = str.replace(/-/g, '+').replace(/_/g, '/');
+      }
+      // padding
+      while (str.length % 4) str += '=';
+      const decoded = atob(str);
+      // UTF-8 decode
+      return decodeURIComponent(escape(decoded));
+    }
+
+    // ===== LIVE =====
+    input.addEventListener('input', () => {
+      if (liveMode) doConvert();
+    });
+
+    // ===== CONVERT BUTTON =====
+    convertBtn.addEventListener('click', () => {
+      if (!input.value.trim()) {
+        showAlert(t('empty'), 'error');
+        return;
+      }
+      doConvert();
+      showToast(t('converted'));
+    });
+
+    // ===== SWAP =====
+    swapBtn.addEventListener('click', () => {
+      if (!output.value.trim()) {
+        showAlert(t('empty'), 'error');
+        return;
+      }
+      const out = output.value;
+      input.value = out;
+      output.value = '';
+      // تغییر حالت
+      currentMode = currentMode === 'encode' ? 'decode' : 'encode';
+      modeTabs.forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.mode === currentMode);
+      });
+      doConvert();
+      showToast(t('swapped'));
+    });
+
+    // ===== PASTE =====
+    pasteBtn.addEventListener('click', async () => {
+      try {
+        const text = await navigator.clipboard.readText();
+        input.value = text;
+        if (liveMode) doConvert();
+        showToast(t('pasted'));
+      } catch (e) {
+        showToast(t('pasteNotSupported'));
+      }
+    });
+
+    // ===== CLEAR INPUT =====
+    clearInputBtn.addEventListener('click', () => {
+      input.value = '';
+      output.value = '';
+      fileInfo.classList.remove('show');
+      updateStats();
+      showToast(t('cleared'));
+    });
+
+    // ===== COPY =====
+    copyBtn.addEventListener('click', () => {
+      if (!output.value) return;
+      navigator.clipboard.writeText(output.value).then(() => {
+        showToast(t('copied'));
+      }).catch(() => {});
+    });
+
+    // ===== DOWNLOAD =====
+    downloadBtn.addEventListener('click', () => {
+      if (!output.value) return;
+      const blob = new Blob([output.value], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = currentMode === 'encode' ? 'base64.txt' : 'decoded.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast(t('downloaded'));
+    });
+
+    // ===== UPLOAD FILE =====
+    uploadBtn.addEventListener('click', () => {
+      fileUpload.classList.toggle('active');
+    });
+
+    fileUpload.addEventListener('click', () => fileInput.click());
+
+    fileUpload.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      fileUpload.style.borderColor = 'var(--accent-1)';
+    });
+    fileUpload.addEventListener('dragleave', () => {
+      fileUpload.style.borderColor = '';
+    });
+    fileUpload.addEventListener('drop', (e) => {
+      e.preventDefault();
+      fileUpload.style.borderColor = '';
+      if (e.dataTransfer.files.length) {
+        handleFile(e.dataTransfer.files[0]);
+      }
+    });
+
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files.length) {
+        handleFile(fileInput.files[0]);
+      }
+    });
+
+    function handleFile(file) {
+      if (file.size > 10 * 1024 * 1024) {
+        showAlert('⚠️ File too large (max 10MB)', 'error');
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const base64 = e.target.result.split(',')[1] || e.target.result;
+        input.value = base64;
+        currentMode = 'encode';
+        modeTabs.forEach(tab => {
+          tab.classList.toggle('active', tab.dataset.mode === 'encode');
+        });
+        doConvert();
+
+        fileInfo.textContent = t('fileSelected') + file.name + ' (' + formatSize(file.size) + ')';
+        fileInfo.classList.add('show');
+        fileUpload.classList.remove('active');
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // ===== STATS =====
+    function updateStats() {
+      const inLen = input.value.length;
+      const outLen = output.value.length;
+      const sizeBytes = new Blob([output.value]).size;
+
+      statInput.textContent = inLen.toLocaleString();
+      statOutput.textContent = outLen.toLocaleString();
+      statSize.textContent = formatSize(sizeBytes);
+    }
+
+    function formatSize(bytes) {
+      if (bytes < 1024) return bytes + ' B';
+      if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+      return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+    }
+
+    // ===== INIT =====
+    applyTheme(currentTheme);
+    applyLanguage(currentLang);
+    updateStats();
+  </script>
+</body>
+</html>
